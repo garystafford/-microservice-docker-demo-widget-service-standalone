@@ -28,7 +28,9 @@ Import sample data to MongoDB locally
 # set your project root
 PROJECT_ROOT='/Users/gstaffo/Documents/projects/widget-docker-demo'
 
-mongoimport --host localhost:27017 --db widgets --collection widget \
+mongoimport --host localhost:27017 \
+  --db widgets \
+  --collection widget \
   --type json --jsonArray \
   --file ${PROJECT_ROOT}/widget-service/src/main/resources/data/data.json
 ```
@@ -114,7 +116,9 @@ Import sample data to MongoDB running in the Docker container
 # set your project root
 PROJECT_ROOT='/Users/gstaffo/Documents/projects/widget-docker-demo'
 
-mongoimport --host localhost:27018 --db widgets --collection widget \
+mongoimport --host localhost:27018 \
+  --db widgets \
+  --collection widget \
   --type json --jsonArray \
   --file ${PROJECT_ROOT}/widget-service/src/main/resources/data/data.json
 ```
