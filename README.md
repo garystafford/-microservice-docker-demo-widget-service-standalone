@@ -17,12 +17,10 @@ The post and this associated project present two methods of building the Docker 
 * Spring Boot
 * Gradle
 * MongoDB
-* Spring Cloud Config Server (migrating to Consul)
-* Spring Cloud Netflix Eureka
 * Spring Boot with Docker
 * The Elastic Stack (Elasticsearch, Kibana, Logstash, and Beats)
 * DockerHub
-* Travis CI
+* Semaphore CI
 
 #### MongoDB
 Import sample data to MongoDB locally
