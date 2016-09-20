@@ -1,7 +1,8 @@
-spring:
-  application:
-    name: widget-service
-  cloud:
-    config:
-      uri: ${CONFIG_SERVER_URL:http://localhost:8888}
-      failFast: true
+#spring:
+#  application:
+#    name: widget-service
+#
+#  cloud:
+#    config:
+#      uri: ${CONFIG_SERVER_URL:http://localhost:8888}
+#      failFast: true

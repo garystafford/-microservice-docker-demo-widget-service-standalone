@@ -18,5 +18,9 @@
         <processorPath useClasspath="true" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="widget-service-standalone_main" target="1.8" />
+      <module name="widget-service-standalone_test" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
 </project>

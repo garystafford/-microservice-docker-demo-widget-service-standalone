@@ -47,9 +47,8 @@ mongo # use mongo shell
 #### Build Service Locally
 Note to build, test, and run the Widget service locally, outside of a Docker container, both the [Spring Cloud Config Server](https://github.com/garystafford/microservice-docker-demo-config-server) and [Netflix Eureka](https://github.com/garystafford/microservice-docker-demo-eureka-server) projects must be started first.
 ```bash
-./gradlew clean build && \
-  java -jar -Dspring.profiles.active=local \
-  build/libs/widget-service-0.1.0.jar
+./gradlew clean build \
+  && java -jar build/libs/widget-service-0.1.0.jar
 ```
 
 #### Test Service Locally
