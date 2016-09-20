@@ -20,6 +20,7 @@ The post and this associated project present two methods of building the Docker 
 -   Spring Boot
 -   Gradle
 -   MongoDB
+-   Consul
 -   Spring Boot with Docker
 -   The Elastic Stack (Elasticsearch, Kibana, Logstash, and Filebeat)
 -   DockerHub
