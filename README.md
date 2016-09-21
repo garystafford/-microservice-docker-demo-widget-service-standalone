@@ -12,7 +12,7 @@
 
 The Widget microservice is one of a set of Java Spring Boot services, for an upcoming post on scaling microservices with the latest Spring and Docker features. Widgets are inanimate objects that users purchase with points. Widgets have particular physical characteristics, such as product id, name, color, size, and current price. An inventory of widgets is stored in the `widgets` MongoDB database.
 
-The post and this associated project present two methods of building the Docker Image containing the Spring Boot service JAR. The Docker Image can be built locally, with Gradle, using Spring Boot with Docker, and pushed directly to DockerHub. Alternately, the Docker Image can be built using a typical continuous integration (CI) pipeline. The pipeline consists of GitHub, Gradle, Semaphore, and DockerHub, using DockerHub's automated Dockerfile build feature.
+The post and this associated project present two methods of building the Docker Image containing the Spring Boot service JAR. The Docker Image can be built locally, with Gradle, using Spring Boot with Docker, and pushed directly to DockerHub. Alternately, the Docker Image can be built using a typical continuous integration (CI) pipeline. The pipeline consists of GitHub, Gradle, Semaphore, and DockerHub, using DockerHub's automated `Dockerfile` build feature.
 
 #### Technologies
 
@@ -20,7 +20,6 @@ The post and this associated project present two methods of building the Docker 
 -   Spring Boot
 -   Gradle
 -   MongoDB
--   Consul
 -   Spring Boot with Docker
 -   The Elastic Stack (Elasticsearch, Kibana, Logstash, and Filebeat)
 -   DockerHub
