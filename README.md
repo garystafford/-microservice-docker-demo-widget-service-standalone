@@ -1,6 +1,6 @@
 ###### Build:
 
-![https://travis-ci.org/garystafford/microservice-docker-demo-widget.svg?branch=master](https://travis-ci.org/garystafford/microservice-docker-demo-widget.svg?branch=master)  [![Build Status](https://semaphoreci.com/api/v1/garystafford/microservice-docker-demo-widget/branches/master/badge.svg)](https://semaphoreci.com/garystafford/microservice-docker-demo-widget)
+[![Build Status](https://semaphoreci.com/api/v1/garystafford/widget-service-standalone/branches/build-artifacts/badge.svg)](https://semaphoreci.com/garystafford/widget-service-standalone)
 
 ###### Docker Hub (_status using [MicroBadger](https://microbadger.com/#/)_):
 
