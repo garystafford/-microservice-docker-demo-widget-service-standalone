@@ -6,7 +6,7 @@ MAINTAINER Gary A. Stafford <garystafford@rochester.rr.com>
 ENV REFRESHED_AT 2016-09-13
 
 VOLUME /tmp
-COPY widget-service-0.1.0.jar /app.jar
+COPY widget-service-*.jar /app.jar
 RUN sh -c 'touch /app.jar' \
   && touch /widget-service.log
 
