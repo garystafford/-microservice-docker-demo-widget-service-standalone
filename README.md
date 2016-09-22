@@ -30,15 +30,13 @@ The post and this associated project present two methods of building the Docker 
 Import sample data to MongoDB locally
 
 ```bash
-# set your project root
-PROJECT_ROOT='/Users/gstaffo/Documents/projects/widget-docker-demo'
-
+# from your project root
 mongoimport \
   --host localhost:27017 \
   --db widgets \
   --collection widget \
   --type json --jsonArray \
-  --file ${PROJECT_ROOT}/widget-service/src/main/resources/data/data.json
+  --file src/main/resources/data/data.json
 ```
 
 Common MongoDB commands
@@ -135,16 +133,21 @@ docker run -e "SPRING_PROFILES_ACTIVE=production" -p 8030:8030 -t garystafford/w
 Import sample data to MongoDB running in the Docker container
 
 ```bash
-# set your project root
-PROJECT_ROOT='/Users/gstaffo/Documents/projects/widget-docker-demo'
-
+# from your project root
 mongoimport \
   --host localhost:27018 \
   --db widgets \
   --collection widget \
   --type json --jsonArray \
-  --file ${PROJECT_ROOT}/widget-service/src/main/resources/data/data.json
+  --file src/main/resources/data/data.json
 ```
+Alternately, use images built with Spring Boot with Docker and Gradle from `Dockerfile` files
+```bash
+docker-compose -f docker-compose.yml -p widget up -d elk; docker logs --follow elk # ^C to exit
+docker-compose -f docker-compose.yml -p widget up -d mongodb; docker logs --follow mongodb
+docker-compose -f docker-compose.yml -p widget up -d widget; docker logs --follow widget
+```
+
 
 #### References
 
