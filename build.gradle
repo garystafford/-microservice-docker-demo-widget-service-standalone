@@ -17,12 +17,19 @@ buildscript {
     }
 }
 
+def application_name = 'widget-service'
+
 def major = '0.2'
 def minor = System.env.SEMAPHORE_BUILD_NUMBER ?: '0'
 def artifact_version = major + '.' + minor
 
+def latest_image = githubOrganization + '/' + application_name + ':' + 'latest'
+def new_tagged_image = githubOrganization + '/' + application_name + ':' + artifact_version
+
+def image_id
+
 jar {
-    baseName = 'widget-service'
+    baseName = application_name
     version = artifact_version
 }
 
@@ -52,6 +59,36 @@ task buildDocker(type: Docker, dependsOn: build) {
             from 'src/main/docker/logstash-beats.crt'
             from 'src/main/docker/start.sh'
             into stageDir
+        }
+    }
+}
+
+task getImageId << {
+    new ByteArrayOutputStream().withStream { id ->
+        def result = exec {
+            executable = 'docker'
+            args = ['inspect', '--format="{{.Id}}"', latest_image]
+            standardOutput = id
+        }
+
+        image_id = id.toString().trim()
+    }
+}
+
+task tagImage(dependsOn: getImageId) {
+    doLast {
+        def result = exec {
+            executable = 'docker'
+            args = ['tag', image_id, new_tagged_image]
+        }
+    }
+}
+
+task pushImage(dependsOn: getImageId) {
+    doLast {
+        def result = exec {
+            executable = 'docker'
+            args = ['push', new_tagged_image]
         }
     }
 }
