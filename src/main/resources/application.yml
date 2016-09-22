@@ -16,10 +16,10 @@ server:
 ---
 
 spring:
-    profiles: production
-    data:
-      mongodb:
-        host: mongodb
+  profiles: production
+  data:
+    mongodb:
+      host: mongodb
 
 logging:
   level:
