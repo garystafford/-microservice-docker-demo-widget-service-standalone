@@ -10,7 +10,7 @@ ENV GITHUB_REPO=https://github.com/garystafford/widget-service-standalone.git
 
 RUN set -ex \
   && apk --no-cache add --virtual .build-dependencies curl git \
-  && mkdir /git_tmp && \
+  && mkdir /git_tmp \
   && git clone --branch build-artifacts --single-branch --depth 1 ${GITHUB_REPO} git_tmp \
   && mv git_tmp/*.jar app.jar \
   && rm -rf git_tmp \
