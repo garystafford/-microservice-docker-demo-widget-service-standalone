@@ -55,7 +55,7 @@ Note to build, test, and run the Widget service locally, outside of a Docker con
 
 ```bash
 ./gradlew clean build \
-  && java -jar build/libs/widget-service-0.1.0.jar
+  && java -jar build/libs/widget-service-0.2.0.jar
 ```
 
 #### Test Service Locally

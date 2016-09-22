@@ -21,7 +21,7 @@ services:
     hostname: widget
     container_name: widget
     environment:
-    - SPRING_PROFILES_ACTIVE=production
+    - SPRING_PROFILES_ACTIVE=testing
 
   elk:
     image: sebp/elk:latest

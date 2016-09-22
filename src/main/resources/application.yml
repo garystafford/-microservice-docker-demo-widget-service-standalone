@@ -16,11 +16,11 @@ server:
 ---
 
 spring:
-  profiles: production
+  profiles: testing
   data:
     mongodb:
       host: mongodb
 
 logging:
   level:
-    root: WARN
+    root: DEBUG
