@@ -3,8 +3,8 @@
 # reference: 	https://gist.github.com/domenic/ec8b0fc8ab45f39403dd
 
 # Environment Variables Examples:
-# export GH_TOKEN=721fd28bc24dTh1sIsN0tREaLc2f137b8b5f
-# travis encrypt GH_TOKEN=721fd28bc24dTh1sIsN0tREaLc2f137b8b5f --add
+# export GH_TOKEN=<your_token_hash>
+# travis encrypt GH_TOKEN=<your_token_hash> --add
 # travis encrypt COMMIT_AUTHOR_EMAIL=<your_email_here> --add
 # export GH_REF=github.com/<your_repo_path>.git
 

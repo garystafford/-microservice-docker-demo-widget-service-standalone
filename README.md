@@ -1,18 +1,18 @@
 ###### Build:
 
-[![Build Status](https://semaphoreci.com/api/v1/garystafford/widget-service-standalone/branches/build-artifacts/badge.svg)](https://semaphoreci.com/garystafford/widget-service-standalone)
+[![Build Status](https://semaphoreci.com/api/v1/garystafford/widget-service-demo/branches/build-artifacts/badge.svg)](https://semaphoreci.com/garystafford/widget-service-demo)
 
 ###### Docker Hub (_status using [MicroBadger](https://microbadger.com/#/)_):
 
-[![](https://images.microbadger.com/badges/version/garystafford/widget-service-standalone.svg)](http://microbadger.com/images/garystafford/widget-service-standalone "Get your own version badge on microbadger.com")  [![](https://images.microbadger.com/badges/image/garystafford/widget-service-standalone.svg)](http://microbadger.com/images/garystafford/widget-service-standalone "Get your own image badge on microbadger.com")
+[![](https://images.microbadger.com/badges/version/garystafford/widget-service-demo.svg)](http://microbadger.com/images/garystafford/widget-service-demo "Get your own version badge on microbadger.com")  [![](https://images.microbadger.com/badges/image/garystafford/widget-service-demo.svg)](http://microbadger.com/images/garystafford/widget-service-demo "Get your own image badge on microbadger.com")
 
 # Spring Boot Widget Microservice
 
 #### Introduction
 
-The Widget microservice is one of a set of Java Spring Boot services, for an upcoming post on scaling microservices with the latest Spring and Docker features. Widgets are inanimate objects that users purchase with points. Widgets have particular physical characteristics, such as product id, name, color, size, and current price. An inventory of widgets is stored in the `widgets` MongoDB database.
+The µservice, the 'Widget' service, is a simple Java Spring Boot RESTful service application, backed by MongoDB and monitored with the Elastic Stack. The µservice performs basic CRUD operations on a collection of widgets, stored a MongoDB database. In the context of this post, a widget represents an inanimate object, with particular physical characteristics, such as product id, name, color, size, and current price.
 
-The post and this associated project present two methods of building the Docker Image containing the Spring Boot service JAR. The Docker Image can be built locally, with Gradle, using Spring Boot with Docker, and pushed directly to DockerHub. Alternately, the Docker Image can be built using a typical continuous integration (CI) pipeline. The pipeline consists of GitHub, Gradle, Semaphore, and DockerHub, using DockerHub's automated `Dockerfile` build feature.
+Since the Widget µservice is built using Spring Boot, the final deployable form of the service is executable Spring Boot uber JAR. The JAR will contain all its dependencies and configuration. The JAR will be deployed inside the Docker image. The Docker image is considered immutable, since it contains all the necessary component and configuration to create a running Docker container, without further manipulation.
 
 #### Technologies
 
@@ -50,8 +50,6 @@ mongo # use mongo shell
 ```
 
 #### Build Service Locally
-
-Note to build, test, and run the Widget service locally, outside of a Docker container, both the [Spring Cloud Config Server](https://github.com/garystafford/microservice-docker-demo-config-server) and [Netflix Eureka](https://github.com/garystafford/microservice-docker-demo-eureka-server) projects must be started first.
 
 ```bash
 ./gradlew clean build \
@@ -141,13 +139,14 @@ mongoimport \
   --type json --jsonArray \
   --file src/main/resources/data/data.json
 ```
+
 Alternately, use images built with Spring Boot with Docker and Gradle from `Dockerfile` files
+
 ```bash
 docker-compose -f docker-compose.yml -p widget up -d elk; docker logs --follow elk # ^C to exit
 docker-compose -f docker-compose.yml -p widget up -d mongodb; docker logs --follow mongodb
 docker-compose -f docker-compose.yml -p widget up -d widget; docker logs --follow widget
 ```
-
 
 #### References
 
