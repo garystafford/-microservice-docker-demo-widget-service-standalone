@@ -3,7 +3,7 @@ jdk: oraclejdk8
 before_install:
 - chmod +x gradlew
 before_deploy:
-- chmod ugo+x deploy.sh
+- chmod ugo+x deploy_travisci.sh
 script:
 - "./gradlew clean build"
 - sh ./deploy_travisci.sh
