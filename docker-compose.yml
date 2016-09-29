@@ -13,7 +13,7 @@ services:
     command: --smallfiles
 
   widget:
-    image: garystafford/widget-service-standalone:latest
+    image: garystafford/widget-service-demo:latest
     ports:
     - 8030:8030
     depends_on:
