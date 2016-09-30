@@ -10,6 +10,7 @@ LABEL \
     org.label-schema.build-date=$BUILD_DATE \
     org.label-schema.name="Widget Service Demo" \
     org.label-schema.description="Widget Service build using Docker Hub automated build" \
+    org.label-schema.license=Apache-2.0 \
     org.label-schema.url="https://github.com/garystafford/widget-service-demo" \
     org.label-schema.vcs-ref=$VCS_REF \
     org.label-schema.vcs-url="https://github.com/garystafford/widget-service-demo" \
