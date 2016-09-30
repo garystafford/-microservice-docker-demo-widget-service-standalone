@@ -84,7 +84,7 @@ task tagLatestImage(dependsOn: getImageId) {
     }
 }
 
-task pushTaggedImage(dependsOn: tagImage) {
+task pushTaggedImage(dependsOn: tagLatestImage) {
     doLast {
         def result = exec {
             executable = 'docker'
