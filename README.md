@@ -1,12 +1,10 @@
-###### Build:
+__Build:__
 
 [![Build Status](https://semaphoreci.com/api/v1/garystafford/widget-service-demo/branches/master/badge.svg)](https://semaphoreci.com/garystafford/widget-service-demo)
 
-###### Docker Hub (_status using [MicroBadger](https://microbadger.com/#/)_):
+__Docker Hub__ (_status using [MicroBadger](https://microbadger.com/#/)_)__:__
 
-[![](https://images.microbadger.com/badges/version/garystafford/widget-service.svg)](https://microbadger.com/images/garystafford/widget-service "Get your own version badge on microbadger.com")  [![](https://images.microbadger.com/badges/image/garystafford/widget-service.svg)](https://microbadger.com/images/garystafford/widget-service "Get your own image badge on microbadger.com")
-[![](https://images.microbadger.com/badges/commit/garystafford/widget-service.svg)](https://microbadger.com/images/garystafford/widget-service "Get your own commit badge on microbadger.com")
-[![](https://images.microbadger.com/badges/license/garystafford/widget-service.svg)](https://microbadger.com/images/garystafford/widget-service "Get your own license badge on microbadger.com")
+[![](https://images.microbadger.com/badges/version/garystafford/widget-service.svg)](https://microbadger.com/images/garystafford/widget-service "Get your own version badge on microbadger.com") |  [![](https://images.microbadger.com/badges/image/garystafford/widget-service.svg)](https://microbadger.com/images/garystafford/widget-service "Get your own image badge on microbadger.com") |  [![](https://images.microbadger.com/badges/commit/garystafford/widget-service.svg)](https://microbadger.com/images/garystafford/widget-service "Get your own commit badge on microbadger.com") |  [![](https://images.microbadger.com/badges/license/garystafford/widget-service.svg)](https://microbadger.com/images/garystafford/widget-service "Get your own license badge on microbadger.com")
 
 # Spring Boot Widget Microservice
 
