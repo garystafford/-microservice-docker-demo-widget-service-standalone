@@ -13,7 +13,7 @@ LABEL \
     org.label-schema.url="https://github.com/garystafford/widget-service-demo" \
     org.label-schema.vcs-ref=$VCS_REF \
     org.label-schema.vcs-url="https://github.com/garystafford/widget-service-demo" \
-    org.label-schema.vendor="Gary A. Stafford <garystafford@rochester.rr.com>" \
+    org.label-schema.vendor="Gary A. Stafford" \
     org.label-schema.version=$VERSION \
     org.label-schema.schema-version="1.0"
 
