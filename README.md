@@ -24,7 +24,6 @@ Since the Widget µservice is built using Spring Boot, the final deployable form
 -   The Elastic Stack (ELK and Filebeat)
 -   DockerHub
 -   Semaphore CI
--   HashiCorp Packer
 
 #### MongoDB
 
