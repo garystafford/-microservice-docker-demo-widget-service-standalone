@@ -45,14 +45,12 @@ RUN set -ex \
   && rm -rf /tmp/filebeat* \
   && mkdir -p /etc/pki/tls/certs
 
-ENV DOCKERFILE_ROOT=src/main/docker
-
 # configure filebeat
-COPY ${DOCKERFILE_ROOT}/filebeat.yml /etc/filebeat/filebeat.yml
-COPY ${DOCKERFILE_ROOT}/filebeat.template.json /etc/filebeat/filebeat.template.json
-COPY ${DOCKERFILE_ROOT}/logstash-beats.crt /etc/pki/tls/certs/logstash-beats.crt
+COPY filebeat.yml /etc/filebeat/filebeat.yml
+COPY filebeat.template.json /etc/filebeat/filebeat.template.json
+COPY logstash-beats.crt /etc/pki/tls/certs/logstash-beats.crt
 
 # start filebeat
-COPY ${DOCKERFILE_ROOT}/start.sh /usr/local/bin/start.sh
+COPY start.sh /usr/local/bin/start.sh
 RUN chmod +x /usr/local/bin/start.sh
 CMD [ "/usr/local/bin/start.sh" ]
