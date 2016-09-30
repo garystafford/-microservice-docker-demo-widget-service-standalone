@@ -1,7 +1,7 @@
 FROM frolvlad/alpine-oraclejdk8:slim
 
 MAINTAINER Gary A. Stafford
-ENV REFRESHED_AT 2016-09-29
+ENV REFRESHED_AT 2016-09-30T01:59:49Z
 
 ARG BUILD_DATE=""
 ARG VCS_REF=""
