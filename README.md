@@ -1,10 +1,10 @@
 ###### Build:
 
-[![Build Status](https://semaphoreci.com/api/v1/garystafford/widget-service-demo/branches/build-artifacts/badge.svg)](https://semaphoreci.com/garystafford/widget-service-demo)
+[![Build Status](https://semaphoreci.com/api/v1/garystafford/widget-service-demo/branches/master/badge.svg)](https://semaphoreci.com/garystafford/widget-service-demo)
 
 ###### Docker Hub (_status using [MicroBadger](https://microbadger.com/#/)_):
 
-[![](https://images.microbadger.com/badges/version/garystafford/widget-service-demo.svg)](http://microbadger.com/images/garystafford/widget-service-demo "Get your own version badge on microbadger.com")  [![](https://images.microbadger.com/badges/image/garystafford/widget-service-demo.svg)](http://microbadger.com/images/garystafford/widget-service-demo "Get your own image badge on microbadger.com")
+[![](https://images.microbadger.com/badges/version/garystafford/widget-service-demo.svg)](https://microbadger.com/images/garystafford/widget-service-demo "Get your own version badge on microbadger.com")  [![](https://images.microbadger.com/badges/image/garystafford/widget-service-demo.svg)](https://microbadger.com/images/garystafford/widget-service-demo "Get your own image badge on microbadger.com")
 
 # Spring Boot Widget Microservice
 
@@ -21,9 +21,10 @@ Since the Widget µservice is built using Spring Boot, the final deployable form
 -   Gradle
 -   MongoDB
 -   Spring Boot with Docker
--   The Elastic Stack (Elasticsearch, Kibana, Logstash, and Filebeat)
+-   The Elastic Stack (ELK and Filebeat)
 -   DockerHub
 -   Semaphore CI
+-   HashiCorp Packer
 
 #### MongoDB
 

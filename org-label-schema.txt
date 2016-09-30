@@ -1,0 +1,39 @@
+Set org.label-schema ARGS variables for Dockerfile LABELS
+
+export BUILD_DATE=$(date -u +"%Y-%m-%dT%H:%M:%SZ")
+export VCS_REF=$(git rev-parse --short HEAD)
+export VERSION=$(if [ ! -z $SEMAPHORE_BUILD_NUMBER ]; then echo "2.0.$SEMAPHORE_BUILD_NUMBER"; else echo "2.0.0"; fi)
+echo "BUILD_DATE: $BUILD_DATE, VCS_REF: $VCS_REF, VERSION: $VERSION"
+
+
+# Build-time metadata as defined at http://label-schema.org
+ARG BUILD_DATE=""
+ARG VCS_REF=""
+ARG VERSION=""
+LABEL \
+    org.label-schema.build-date=$BUILD_DATE \
+    org.label-schema.name="Widget Service Demo" \
+    org.label-schema.description="Widget Service build using Spring Boot for Docker" \
+    org.label-schema.url="https://github.com/garystafford/widget-service-demo" \
+    org.label-schema.vcs-ref=$VCS_REF \
+    org.label-schema.vcs-url="https://github.com/garystafford/widget-service-demo" \
+    org.label-schema.vendor="Gary A. Stafford <garystafford@rochester.rr.com>" \
+    org.label-schema.version=$VERSION \
+    org.label-schema.schema-version="1.0"
+
+
+LABEL \
+    org.label-schema.name="Widget Service Demo" \
+    org.label-schema.description="Standalone Spring Boot Service backed by MongoDB" \
+    org.label-schema.url="https://github.com/garystafford/widget-service-demo" \
+    org.label-schema.vcs-url="https://github.com/garystafford/widget-service-demo" \
+    org.label-schema.vendor="Gary A. Stafford" \
+    org.label-schema.schema-version="1.0"
+
+docker build \
+  --build-arg BUILD_DATE=$BUILD_DATE \
+  --build-arg VCS_REF=$VCS_REF \
+  --build-arg VERSION=$VERSION \
+  -f src/main/docker/Dockerfile \
+  -t garystafford/widget-service:latest \
+  .

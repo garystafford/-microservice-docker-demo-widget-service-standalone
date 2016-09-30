@@ -50,7 +50,7 @@ group = githubOrganization
 task buildDocker(type: Docker, dependsOn: build) {
     push = true
     applicationName = jar.baseName
-    dockerfile = file('src/main/docker/Dockerfile')
+    dockerfile = file('src/main/docker/Dockerfile_sb')
     doFirst {
         copy {
             from jar
