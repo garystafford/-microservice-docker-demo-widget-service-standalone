@@ -75,7 +75,7 @@ task getImageId << {
     }
 }
 
-task tagImage(dependsOn: getImageId) {
+task tagLatestImage(dependsOn: getImageId) {
     doLast {
         def result = exec {
             executable = 'docker'
@@ -84,11 +84,29 @@ task tagImage(dependsOn: getImageId) {
     }
 }
 
-task pushImage(dependsOn: tagImage) {
+task pushTaggedImage(dependsOn: tagImage) {
     doLast {
         def result = exec {
             executable = 'docker'
             args = ['push', new_tagged_image]
+        }
+    }
+}
+
+task pushLatestImage() {
+    doLast {
+        def result = exec {
+            executable = 'docker'
+            args = ['push', latest_image]
+        }
+    }
+}
+
+task inspectLatestImage() {
+    doLast {
+        def result = exec {
+            executable = 'docker'
+            args = ['inspect', latest_image]
         }
     }
 }
